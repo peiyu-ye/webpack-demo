@@ -1,10 +1,5 @@
-// import  _  from  '../node_modules/lodash';
-import _ from 'lodash';
-
-function  createElement(){
-    let div =  document.createElement('div');
-    div.innerHTML =  _.join(['hello',  'webpack'],  '');
-    div.className = 'box';
-    return  div;
-}
-document.body.appendChild(createElement());
+import Vue from 'vue';
+import App from './App.vue';
+new Vue({
+    render: h => h(App)
+}).$mount('#app')
