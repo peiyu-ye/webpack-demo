@@ -14,6 +14,11 @@ module.exports = merge(
             hot: true,               //启用模块热替换特性
             inline: true,            //启用内联模式，一段处理实时重载的脚本被插入到bundle中，并且构建消息会出现在浏览器控制台
             historyApiFallback: true,//开发单页应用时有用，依赖于HTML5 history API，设为true时所有跳转将指向index.html
+            quiet: true, // necessary for FriendlyErrorsPlugin
+            overlay: {
+                warnings: true,
+                errors: true
+            }
         }
     }
 );
